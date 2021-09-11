@@ -502,7 +502,7 @@ class ExportFBX(bpy.types.Operator, ExportHelper):
             name="Add Leaf Bones",
             description="Append a final bone to the end of each chain to specify last bone length "
                         "(use this when you intend to edit the armature from exported data)",
-            default=True # False for commit!
+            default=False
             )
     primary_bone_axis: EnumProperty(
             name="Primary Bone Axis",
