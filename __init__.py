@@ -392,7 +392,7 @@ class ExportFBX(bpy.types.Operator, ExportHelper):
     use_selection: BoolProperty(
             name="Selected Objects",
             description="Export selected and visible objects only",
-            default=False,
+            default=True,
             )
     use_active_collection: BoolProperty(
             name="Active Collection",
@@ -474,7 +474,7 @@ class ExportFBX(bpy.types.Operator, ExportHelper):
                    ),
             description="Export smoothing information "
                         "(prefer 'Normals Only' option if your target importer understand split normals)",
-            default='OFF',
+            default='FACE',
             )
     use_subsurf: BoolProperty(
             name="Export Subdivision Surface",
