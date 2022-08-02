@@ -376,7 +376,7 @@ class ExportFBX(bpy.types.Operator, ExportHelper):
     use_selection: BoolProperty(
             name="Selected Objects",
             description="Export selected and visible objects only",
-            default=False,
+            default=True,
             )
     use_visible: BoolProperty(
             name='Visible Objects',
@@ -463,7 +463,7 @@ class ExportFBX(bpy.types.Operator, ExportHelper):
                    ),
             description="Export smoothing information "
                         "(prefer 'Normals Only' option if your target importer understand split normals)",
-            default='OFF',
+            default='FACE',
             )
     use_subsurf: BoolProperty(
             name="Export Subdivision Surface",
@@ -496,7 +496,7 @@ class ExportFBX(bpy.types.Operator, ExportHelper):
             name="Add Leaf Bones",
             description="Append a final bone to the end of each chain to specify last bone length "
                         "(use this when you intend to edit the armature from exported data)",
-            default=True # False for commit!
+            default=False
             )
     primary_bone_axis: EnumProperty(
             name="Primary Bone Axis",

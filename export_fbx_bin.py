@@ -2593,7 +2593,7 @@ def fbx_data_from_scene(scene, depsgraph, settings):
             elif ob_obj.type == 'CAMERA':
                 cam_key = data_cameras[ob_obj]
                 connections.append((b"OO", get_fbx_uuid_from_key(cam_key), ob_obj.fbx_uuid, None))
-            elif ob_obj.type == 'EMPTY' or ob_obj.type == 'ARMATURE':
+            elif ob_obj.type == 'EMPTY':
                 empty_key = data_empties[ob_obj]
                 connections.append((b"OO", get_fbx_uuid_from_key(empty_key), ob_obj.fbx_uuid, None))
             elif ob_obj.type in BLENDER_OBJECT_TYPES_MESHLIKE:
